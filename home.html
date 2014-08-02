@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Timothy Tong: Home</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Timothy Tong"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.2">
+        <style type="text/css">
+            html {
+                height: 100%;
+            }
+            .body{
+                margin: 0 auto;
+                clear: both;
+            }
+            body {
+                background-color: transparent;
+                padding: 0;
+                text-align: left;
+                font-family: 'open sans';
+                position: relative;
+                margin: 0;
+                height: 100%;
+                -webkit-font-smoothing: antialiased;
+            }
+            /* ===========================
+               ===== Main Navigation ===== 
+               =========================== */
+            .mainHeader{
+                z-index: 100;
+                background-color: transparent;
+            }
+
+            .mainHeader nav {
+                width: 100%;
+                clear: both;
+                background: #666;
+                font-size: 1.143em;
+                height: 40px;
+                line-height: 30px;
+                margin: 0px auto 0px auto;
+                text-align: center;
+            }
+
+            .mainHeader nav ul {
+                list-style: none; 
+                margin: 0 auto;
+            }
+
+            .mainHeader nav ul li {
+                float: left; 
+                display: inline; 
+                /*                width: 25%;*/
+            }
+
+            .mainHeader nav a:link, .mainHeader nav a:visited {
+                color: #fff;
+                display: inline-block;
+                height: 40px;
+                padding: 5px 23px;
+                text-decoration: none;
+            }
+            .mainHeader nav a:active, .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+                background: #B2B2B2;
+                color: #fff;
+                text-shadow: none !important;
+                width: 100%;
+            }
+            .mainHeader nav a:hover{
+                background: black;
+                color: #fff;
+                text-shadow: none !important;
+                width: 100%;
+            }
+
+            @media only screen and (min-width : 150px) and (max-width : 780px)
+            {
+                body{
+                    width: 100%;
+                    font-size: 120%;
+                    letter-spacing: 0px;
+                }
+                .mainHeader nav {
+                    background: #666;
+                    font-size: 1.143em;
+                    height: 40px;
+                    line-height: 20px;
+                }
+                .mainHeader nav ul {
+                    list-style: none; 
+                    margin: 0 auto;
+                    padding-left: 0;
+                }
+
+                .mainHeader nav li {
+                    margin-left: 0 auto;
+                    width: 25%;
+                }
+                .mainHeader nav a:link, .mainHeader nav a:visited {
+                    color: #FFF;
+                    display: block;
+                    height: 40px;
+                    padding: 10px 0;
+                    text-decoration: none;
+                }
+
+                .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+                    background: #B2B2B2;
+                    color: #fff;
+                    text-shadow: none !important;
+                }
+                body{
+                    max-width:100%;
+                    -webkit-overflow-scrolling: touch;
+                }
+                p{
+                    letter-spacing: 0px;
+                    padding: 0px;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body class="body">
+        <header class="mainHeader">
+            <nav>
+                <ul>
+                    <li class="active"><a href="/home.html">Home</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                    <li><a href="/files/Resume_Timothy_Tong.pdf">Resume</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div></div>
+    </body>
+</html>

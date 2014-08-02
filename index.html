@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Timothy Tong: Intro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.2">
+        <script type="text/javascript" src="/js/jquery.min.js"></script>
+        <style type="text/css">
+            @font-face{
+                font-family: HelveticaNeue-Ultralight;
+                src: url('/fonts/HelveticaNeue-UltraLight.otf');
+            }
+            .enterSite{
+                display: inline-block;
+                border: 1px solid white;
+                border-radius: 5px;
+/*                padding-top: 10px;*/
+                text-align: center;
+                -moz-border-radius: 5px;
+                -webkit-border-radius: 5px;
+                line-height: 120%;
+                text-decoration: none;
+                color: #fff;
+                width: 100px;
+                font-size: 30px;
+                font-family: HelveticaNeue-Ultralight,"Helvetica Ultralight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-weight: 100;
+                width: 150px;
+                color: rgb(255, 255, 255);
+                border: 1px solid rgb(255, 255, 255);
+                background: transparent;
+                letter-spacing: 0px;
+            }
+            .enterSite:hover{
+                background: #444;
+            }
+            .enterSite:active{
+                background: rgb(0,0,0);
+            }
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: black;
+            }
+            h1{
+                font-size: 60px;
+                margin-bottom: 0px;
+            }
+            h2{
+                font-size: 40px;
+                margin-top: 0px;
+            }
+            h3{
+                font-size: 26px;
+                margin-top: 0px;
+            }
+            ul li .content1{
+                position: absolute;
+                color: white;
+                font-family: HelveticaNeue-Ultralight,"Helvetica Ultralight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-weight: 100;
+                letter-spacing: -1px;   
+                top: 250px;
+                left: 50px;
+            }
+            ul li .content2{
+                position: absolute;
+                color: white;
+                font-family: HelveticaNeue-Ultralight,"Helvetica Ultralight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-weight: 100;
+                letter-spacing: -1px;   
+                top: 100px;
+                left: 50px;
+            }
+            ul li .content3{
+                position: absolute;
+                color: black;
+                font-family: HelveticaNeue-Ultralight,"Helvetica Ultralight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-weight: 100;
+                letter-spacing: -1px;   
+                top: 250px;
+                left: 50px;
+            }
+            ul li .content4{
+                position: absolute;
+                color: white;
+                font-family: HelveticaNeue-Ultralight,"Helvetica Ultralight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-weight: 100;
+                letter-spacing: -1px;   
+                top: 200px;
+                left: 50px;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+            }
+            ul li{
+                list-style: none;
+                overflow: hidden;
+                height: 700px;
+                position: relative;
+            }
+            .parallax-background{
+                height:800px;
+            }
+
+            .tiger{
+                background-image: url('/images/tiger_artistic_bg_1440x900.jpg');
+                background-size: 100%;
+                margin-left: 20%;
+                background-repeat: no-repeat;
+                background-position: 100% 40%;
+            }
+
+            .whitefox{
+                background-image: url('/images/white_fox_bg-1600x900.jpg');
+                background-size: cover;
+                background-position: 100% 40%;
+            }
+
+            .arcticfox{
+                background-image: url('/images/arctic_fox_bg_1440x900.jpg');
+                background-size: cover;
+                background-position: 100% 0%;
+            }
+
+            .httyd{
+                background-image: url('/images/toothless_bg_2171x900.jpg');
+                background-size: cover;
+                background-position: 40% 0%;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+        <ul class="parallax">
+            <li>
+                <div class="parallax-background tiger"></div>
+                <div class="content1">
+                    <h1>My name is Timothy Tong.</h1>
+                    <h2>Welcome to my personal website.</h2>
+                </div>
+            </li>
+            <li>
+                <div class="parallax-background whitefox"></div>
+                <div class="content2">
+                    <h1>Who Am I?</h1>
+                    <h3>A diligent and self-motivated technology fan whose<br>aspiration is to be part of a team that engineers<br>groundbreaking products and makes impact on the world.</h3>
+                </div>
+            </li>
+            <li>
+                <div class="parallax-background arcticfox"></div>
+                <div class="content3">
+                    <h1>A Technology Enthusiast.</h1>
+                    <h2>With a great affection towards animals.</h2>
+                </div>
+            </li>
+            <li>
+                <div class="parallax-background httyd"></div>
+                <div class="content4">
+                    <h1>Interested?</h1>
+                    <h2>Enter my site to find out more.</h2>
+                    <button class="enterSite" onclick="window.location.href = '/home.html'">Enter Site</button>
+                </div>
+            </li>
+        </ul>
+
+        <script>
+            (function($) {
+                var $container = $(".parallax");
+                var $divs = $container.find("div.parallax-background");
+                var elementBeingScrolled = document.body;
+                var liHeight = $divs.eq(0).closest("li").height();
+                var diffHeight = $divs.eq(0).height() - liHeight;
+                var i, len, div, li, offset, scroll, top, transform;
+                var render = function() {
+                    top = elementBeingScrolled.scrollTop;
+                    //loop through divs
+                    for (i = 0, len = $divs.length; i < len; i++) {
+                        // get one div
+                        div = $divs[i];
+                        // calculate the offset TOP of div
+                        offset = $(div).offset().top;
+                        // calculate the amount to scroll
+                        scroll = ~~(((top - offset) / liHeight) * diffHeight);
+                        // apply
+                        transform = "translate3d(0px," + scroll + "px,0px)";
+                        div.style.webkitTransform = transform;
+                        div.style.MozTransform = transform;
+                        div.style.msTransform = transform;
+                        div.style.OTransform = transform;
+                        div.style.transform = transform;
+                    }
+                };
+
+                (function loop() {
+                    requestAnimationFrame(loop);
+                    render();
+                })();
+            })(jQuery);
+        </script>
+    </body>
+</html>
